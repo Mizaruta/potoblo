@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: potoblo
+    env: static
+    buildCommand: npm install && npm run build  # Si vous utilisez un bundler
+    staticPublishPath: ./dist  # ou ./build, selon votre projet
+    branch: main
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html 
