@@ -5,6 +5,7 @@ const productController = require('../../controllers/productController');
 const auth = require('../../middleware/auth');
 const admin = require('../../middleware/admin');
 const upload = require('../../middleware/upload');
+const Product = require('../../models/product');
 
 // @route   GET api/products
 // @desc    Obtenir tous les produits
@@ -46,7 +47,22 @@ router.put('/:id', [auth, admin, upload.array('images', 5)], (req, res) => {
 // @route   DELETE api/products/:id
 // @desc    Supprimer un produit
 // @access  Private/Admin
-router.delete('/:id', [auth, admin], productController.deleteProduct);
+router.delete('/:id', [auth, admin], async (req, res) => {
+  try {
+    const product = await Product.findById(req.params.id);
+    
+    if (!product) {
+      return res.status(404).json({ message: 'Produit non trouvé' });
+    }
+    
+    await Product.findByIdAndDelete(req.params.id);
+    
+    res.json({ message: 'Produit supprimé avec succès' });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: 'Erreur serveur' });
+  }
+});
 
 // @route   POST api/products/:id/reviews
 // @desc    Ajouter une évaluation à un produit
