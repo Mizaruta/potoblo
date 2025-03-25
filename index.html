@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DropStyle - Boutique en ligne</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/slider.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">DropStyle</a>
+        </div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="index.html" class="active">Accueil</a></li>
+                <li><a href="pages/produits.html">Produits</a></li>
+                <li><a href="pages/categories.html">Catégories</a></li>
+                <li><a href="pages/a-propos.html">À Propos</a></li>
+                <li><a href="pages/contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="nav-icons">
+            <a href="#" id="search-icon"><i class="fas fa-search"></i></a>
+            <a href="pages/panier.html"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a>
+            <a href="#" id="user-icon"><i class="fas fa-user"></i></a>
+        </div>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <!-- Recherche -->
+    <div class="search-container">
+        <input type="text" placeholder="Rechercher des produits...">
+        <button title="Rechercher"><i class="fas fa-search"></i></button>
+        <span class="close-search">&times;</span>
+    </div>
+
+    <!-- Bannière -->
+    <header class="hero">
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slide active">
+                    <div class="slide-content">
+                        <h1>Découvrez les Dernières Tendances</h1>
+                        <p>Des produits uniques à des prix imbattables</p>
+                        <a href="pages/produits.html" class="btn-primary">Voir les Produits</a>
+                    </div>
+                    <div class="slide-bg" style="background-image: url('images/slider/slide1.jpg');"></div>
+                </div>
+                <div class="slide">
+                    <div class="slide-content">
+                        <h1>Livraison Gratuite</h1>
+                        <p>Pour toute commande supérieure à 50€</p>
+                        <a href="pages/produits.html" class="btn-primary">Acheter Maintenant</a>
+                    </div>
+                    <div class="slide-bg" style="background-image: url('images/slider/slide2.jpg');"></div>
+                </div>
+                <div class="slide">
+                    <div class="slide-content">
+                        <h1>-30% sur toute la Mode</h1>
+                        <p>Offre limitée jusqu'à la fin du mois</p>
+                        <a href="pages/categories.html" class="btn-primary">En Profiter</a>
+                    </div>
+                    <div class="slide-bg" style="background-image: url('images/slider/slide3.jpg');"></div>
+                </div>
+            </div>
+            <div class="slider-controls">
+                <button class="prev-slide" aria-label="Diapositive précédente"><i class="fas fa-chevron-left"></i></button>
+                <div class="slider-dots">
+                    <span class="dot active" data-index="0"></span>
+                    <span class="dot" data-index="1"></span>
+                    <span class="dot" data-index="2"></span>
+                </div>
+                <button class="next-slide" aria-label="Diapositive suivante"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Produits Vedettes -->
+    <section class="featured-products">
+        <h2>Produits Populaires</h2>
+        <div class="products-grid">
+            <!-- Produits dynamiques générés par JavaScript -->
+        </div>
+        <a href="pages/produits.html" class="btn-secondary">Voir Plus</a>
+    </section>
+
+    <!-- Ajout après les produits vedettes -->
+    <section class="special-offer fade-in">
+        <div class="offer-container">
+            <div class="offer-image">
+                <img src="images/special-offer.jpg" alt="Offre Spéciale">
+                <div class="offer-badge">-40%</div>
+            </div>
+            <div class="offer-content">
+                <h2>Offre Spéciale du Moment</h2>
+                <p>Ne manquez pas notre offre exclusive sur cette collection limitée. Stock limité disponible!</p>
+                <div class="countdown">
+                    <div class="countdown-title">Cette offre se termine dans:</div>
+                    <div class="countdown-timer">
+                        <div class="countdown-item">
+                            <span class="countdown-value hours">24</span>
+                            <div class="countdown-label">Heures</div>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-value minutes">00</span>
+                            <div class="countdown-label">Minutes</div>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-value seconds">00</span>
+                            <div class="countdown-label">Secondes</div>
+                        </div>
+                    </div>
+                </div>
+                <a href="pages/produits.html" class="btn-primary">Voir l'Offre</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catégories -->
+    <section class="categories">
+        <h2>Parcourir par Catégorie</h2>
+        <div class="categories-grid">
+            <div class="category-card">
+                <img src="images/electronics.jpg" alt="Électronique">
+                <h3>Électronique</h3>
+            </div>
+            <div class="category-card">
+                <img src="images/fashion.jpg" alt="Mode">
+                <h3>Mode</h3>
+            </div>
+            <div class="category-card">
+                <img src="images/home.jpg" alt="Maison">
+                <h3>Maison</h3>
+            </div>
+            <div class="category-card">
+                <img src="images/beauty.jpg" alt="Beauté">
+                <h3>Beauté</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Avantages -->
+    <section class="benefits">
+        <div class="benefit-item">
+            <i class="fas fa-truck"></i>
+            <h3>Livraison Rapide</h3>
+            <p>Livraison en 3-7 jours ouvrables</p>
+        </div>
+        <div class="benefit-item">
+            <i class="fas fa-undo"></i>
+            <h3>Retours Faciles</h3>
+            <p>30 jours pour changer d'avis</p>
+        </div>
+        <div class="benefit-item">
+            <i class="fas fa-lock"></i>
+            <h3>Paiement Sécurisé</h3>
+            <p>Transactions 100% sécurisées</p>
+        </div>
+        <div class="benefit-item">
+            <i class="fas fa-headset"></i>
+            <h3>Support 24/7</h3>
+            <p>Assistance à votre service</p>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <h2>Restez Informé</h2>
+        <p>Inscrivez-vous à notre newsletter pour recevoir nos offres exclusives</p>
+        <form id="newsletter-form">
+            <input type="email" placeholder="Votre adresse email" required>
+            <button type="submit" class="btn-primary">S'inscrire</button>
+        </form>
+    </section>
+
+    <!-- Modification des cartes produits pour ajouter des fonctionnalités -->
+    <template id="product-template">
+        <div class="product-card fade-in">
+            <div class="product-img">
+                <img src="" alt="">
+                <div class="product-actions">
+                    <a href="#" class="action-btn wishlist-btn" title="Ajouter aux favoris">
+                        <i class="far fa-heart"></i>
+                    </a>
+                    <a href="#" class="action-btn compare-btn" title="Comparer">
+                        <i class="fas fa-exchange-alt"></i>
+                    </a>
+                    <a href="#" class="action-btn quickview-btn" title="Aperçu rapide">
+                        <i class="far fa-eye"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="product-info">
+                <h3></h3>
+                <p class="product-category"></p>
+                <div class="stock-indicator">
+                    <div class="stock-text"></div>
+                    <div class="stock-meter">
+                        <div class="stock-level"></div>
+                    </div>
+                </div>
+                <div class="product-price">
+                    <span class="price"></span>
+                    <a href="#" class="add-to-cart">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <!-- Ajout d'une section témoignages -->
+    <section class="testimonials fade-in">
+        <h2>Ils Nous Font Confiance</h2>
+        <div class="testimonials-slider">
+            <div class="testimonial-card">
+                <div class="testimonial-avatar">
+                    <img src="images/testimonials/avatar1.jpg" alt="Marie D.">
+                </div>
+                <div class="testimonial-content">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"J'ai été impressionnée par la qualité des produits et la rapidité de la livraison. Je recommande vivement!"</p>
+                    <div class="testimonial-author">Marie D.</div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-avatar">
+                    <img src="images/testimonials/avatar2.jpg" alt="Thomas L.">
+                </div>
+                <div class="testimonial-content">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"Service client exceptionnel. Un problème avec ma commande a été résolu immédiatement."</p>
+                    <div class="testimonial-author">Thomas L.</div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-avatar">
+                    <img src="images/testimonials/avatar3.jpg" alt="Sophie M.">
+                </div>
+                <div class="testimonial-content">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"Des prix imbattables pour une qualité supérieure. Je suis une cliente fidèle depuis 1 an maintenant!"</p>
+                    <div class="testimonial-author">Sophie M.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Vidéo -->
+    <section class="home-video-section fade-in">
+        <div class="container">
+            <h2>Découvrez nos Produits en Action</h2>
+            
+            <div class="video-player-container">
+                <video class="video-player" poster="images/videos/home-video-thumbnail.jpg">
+                    <source src="videos/home-featured.mp4" type="video/mp4">
+                    Votre navigateur ne supporte pas la lecture de vidéos.
+                </video>
+                
+                <div class="video-overlay">
+                    <div class="play-button">
+                        <i class="fas fa-play"></i>
+                    </div>
+                    <h3 class="video-title">Découvrez l'Expérience DropStyle</h3>
+                    <p class="video-description">Comment nos produits peuvent améliorer votre quotidien</p>
+                </div>
+                
+                <div class="video-controls">
+                    <button class="play-pause-btn"><i class="fas fa-play"></i></button>
+                    <div class="progress-container">
+                        <div class="progress-bar"></div>
+                    </div>
+                    <div class="time-display">0:00 / 0:00</div>
+                    <div class="volume-container">
+                        <button class="volume-btn"><i class="fas fa-volume-up"></i></button>
+                        <div class="volume-slider">
+                            <div class="volume-level"></div>
+                        </div>
+                    </div>
+                    <button class="fullscreen-btn"><i class="fas fa-expand"></i></button>
+                </div>
+            </div>
+            
+            <div class="video-preview-grid">
+                <a href="pages/videos.html" class="video-preview-item">
+                    <div class="video-preview-thumbnail">
+                        <img src="images/videos/video-thumbnail-1.jpg" alt="Écouteurs Sans Fil">
+                        <div class="video-preview-play">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <h3>Écouteurs Sans Fil</h3>
+                </a>
+                
+                <a href="pages/videos.html" class="video-preview-item">
+                    <div class="video-preview-thumbnail">
+                        <img src="images/videos/video-thumbnail-2.jpg" alt="Montre Intelligente">
+                        <div class="video-preview-play">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <h3>Montre Intelligente</h3>
+                </a>
+                
+                <a href="pages/videos.html" class="video-preview-item">
+                    <div class="video-preview-thumbnail">
+                        <img src="images/videos/video-thumbnail-3.jpg" alt="Sac à Main Élégant">
+                        <div class="video-preview-play">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <h3>Sac à Main Élégant</h3>
+                </a>
+            </div>
+            
+            <div class="text-center">
+                <a href="pages/videos.html" class="btn-primary">Voir Toutes les Vidéos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section avec arrière-plan vidéo -->
+    <section class="video-background-section fade-in">
+        <video class="video-background" autoplay muted loop playsinline>
+            <source src="videos/background-loop.mp4" type="video/mp4">
+        </video>
+        <div class="video-background-overlay"></div>
+        
+        <div class="video-background-content">
+            <h2>L'Expérience DropStyle</h2>
+            <p>Découvrez pourquoi des milliers de clients nous font confiance pour leurs achats en ligne.</p>
+            <a href="pages/a-propos.html" class="btn-primary">Notre Histoire</a>
+        </div>
+    </section>
+
+    <!-- Pied de page -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>DropStyle</h3>
+                <p>Votre destination pour des produits tendance à prix abordables.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Liens Rapides</h3>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="pages/produits.html">Produits</a></li>
+                    <li><a href="pages/categories.html">Catégories</a></li>
+                    <li><a href="pages/a-propos.html">À Propos</a></li>
+                    <li><a href="pages/contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Aide & Information</h3>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Livraison</a></li>
+                    <li><a href="#">Retours</a></li>
+                    <li><a href="#">Suivi de Commande</a></li>
+                    <li><a href="#">Conditions Générales</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Rue du Commerce, 75001 Paris</p>
+                <p><i class="fas fa-envelope"></i> info@dropstyle.fr</p>
+                <p><i class="fas fa-phone"></i> +33 1 23 45 67 89</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 DropStyle. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- Ajout des scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/effects.js"></script>
+    <script src="js/api.js"></script>
+</body>
+</html> 
